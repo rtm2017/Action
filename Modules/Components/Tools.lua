@@ -23,7 +23,7 @@ local GetToggle					= A.GetToggle
 	  
 local Timer						= _G.C_Timer 
 local GetMouseFocus				= _G.GetMouseFocus
-local IsAddOnLoaded 			= _G.IsAddOnLoaded
+local IsAddOnLoaded 			= _G.C_AddOns.IsAddOnLoaded
 
 local CreateFrame 				= _G.CreateFrame
 local UnitGUID 					= _G.UnitGUID

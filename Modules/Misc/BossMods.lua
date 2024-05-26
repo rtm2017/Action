@@ -130,7 +130,7 @@ if BigWigsLoader then
 	A.BossMods.HasBigWigs = true 	
 	
 	local BigWigsPluginsName = "BigWigs_Plugins"
-	if  _G.IsAddOnLoaded(BigWigsPluginsName) then 
+	if  _G.C_AddOns.IsAddOnLoaded(BigWigsPluginsName) then 
 		BIGWIGS_TIMER_PULL = strlowerCache[_G.BigWigsAPI:GetLocale("BigWigs: Plugins").pull]
 	else 
 		local L = setmetatable({
