@@ -134,7 +134,7 @@ local isSpellRangeException = {
 	-- Typhoon
 	[132469]	= true,
 }
-local ItemHasRange 			= ItemHasRange
+local ItemHasRange 			= _G.C_Item.ItemHasRange
 local isItemRangeException 	= {}
 local isItemUseException	= {
 	-- Crest of Pa'ku
@@ -168,10 +168,10 @@ local 	  GetSpellTexture, 	  GetSpellLink,    GetSpellInfo, 	GetSpellDescription
 
 -- Item 	  
 local 	 IsUsableItem, 	  IsHelpfulItem, 	IsHarmfulItem, 	  IsCurrentItem =
-	  _G.IsUsableItem, _G.IsHelpfulItem, _G.IsHarmfulItem, _G.IsCurrentItem
+	  _G.C_Item.IsUsableItem, _G.C_Item.IsHelpfulItem, _G.C_Item.IsHarmfulItem, _G.C_Item.IsCurrentItem
   
 local 	 GetItemInfo, 	 GetItemIcon, 	 GetItemInfoInstant, 	GetItemSpell = 
-	  _G.GetItemInfo, _G.GetItemIcon, _G.GetItemInfoInstant, _G.GetItemSpell	  
+	  _G.C_Item.GetItemInfo, _G.C_Item.GetItemIcon, _G.C_Item.GetItemInfoInstant, _G.C_Item.GetItemSpell	  
 
 -- Talent	  
 local     TalentMap,     PvpTalentMap =

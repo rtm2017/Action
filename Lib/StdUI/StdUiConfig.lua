@@ -9,7 +9,7 @@ if not StdUi:UpgradeNeeded(module, version) then
 	return
 end
 
-local IsAddOnLoaded = C_AddOns.IsAddOnLoaded;
+local IsAddOnLoaded = _G.C_AddOns.IsAddOnLoaded;
 
 StdUi.config = {};
 

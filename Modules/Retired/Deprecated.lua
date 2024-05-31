@@ -47,7 +47,7 @@ local huge 							= math.huge
 
 local OriginalGetSpellInfo 			= _G.GetSpellInfo
 local GetInventoryItemCooldown 		= _G.GetInventoryItemCooldown
-local GetItemCooldown 				= _G.GetItemCooldown
+local GetItemCooldown 				= _G.C_Item.GetItemCooldown
 local UnitIsUnit 					= _G.UnitIsUnit
 local 	 IsPlayerSpell,    IsUsableSpell 	= 
 	  _G.IsPlayerSpell, _G.IsUsableSpell
@@ -976,7 +976,7 @@ Env.Item = PseudoClass({
 			local ID = Items[self.Slot]:GetID() or 0
 			local start, duration, enable = Items[self.Slot]:GetCooldown()
 			local onCD = enable == 0 or start + duration - TMW.time > 0
-	        return not onCD and Items[self.Slot]:GetEquipped() and not self.IsForbidden[ID] and ( not unit or unit == "player" or not ItemHasRange(ID) or Items[self.Slot]:IsInRange(unit) )
+	        return not onCD and Items[self.Slot]:GetEquipped() and not self.IsForbidden[ID] and ( not unit or unit == "player" or not C_Item.ItemHasRange(ID) or Items[self.Slot]:IsInRange(unit) )
 	end, "Slot"),	
 	GetID = Cache:Wrap(function(self)   			
 	        return Items[self.Slot]:GetID() or 0

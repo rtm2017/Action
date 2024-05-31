@@ -153,7 +153,7 @@ if BigWigsLoader then
 				BIGWIGS_TIMER_PULL = strlowerCache[_G.BigWigsAPI:GetLocale("BigWigs: Plugins").pull]
 				A.Listener:Remove("ACTION_BIGWIGS_PLUGINS", "ADDON_LOADED")
 			end 		
-		end); _G.LoadAddOn(BigWigsPluginsName)	
+		end); _G.C_AddOns.LoadAddOn(BigWigsPluginsName)	
 	end 
 		
 	local Timers, owner = {}, {}

@@ -56,15 +56,15 @@ local	 GetPowerRegen,    GetRuneCooldown,    GetShapeshiftForm, 	 GetCritChance,
 	  _G.GetPowerRegen, _G.GetRuneCooldown, _G.GetShapeshiftForm, _G.GetCritChance, _G.GetHaste, _G.GetMasteryEffect, _G.GetVersatilityBonus, _G.GetCombatRatingBonus
 	  
 local 	 IsEquippedItem, 	IsStealthed, 	IsMounted, 	  IsFalling, 	IsSwimming,    IsSubmerged = 	  
-	  _G.IsEquippedItem, _G.IsStealthed, _G.IsMounted, _G.IsFalling, _G.IsSwimming, _G.IsSubmerged 
+	  _G.C_Item.IsEquippedItem, _G.IsStealthed, _G.IsMounted, _G.IsFalling, _G.IsSwimming, _G.IsSubmerged 
 	  
 local 	 CancelUnitBuff, 	CancelSpellByName, 	  CombatLogGetCurrentEventInfo =
 	  _G.CancelUnitBuff, _G.CancelSpellByName, _G.CombatLogGetCurrentEventInfo	  
 	  
 -- Bags / Inventory
 local 	 C_Container = _G.C_Container
-local 	 GetContainerNumSlots, 	  									  GetContainerItemID, 	 								   GetInventoryItemID, 	  GetItemInfoInstant,    GetItemCount, 	  IsEquippableItem =	  
-	  _G.GetContainerNumSlots or C_Container.GetContainerNumSlots, _G.GetContainerItemID or C_Container.GetContainerItemID, _G.GetInventoryItemID, _G.GetItemInfoInstant, _G.GetItemCount, _G.IsEquippableItem	 
+local 	 GetContainerNumSlots, 	  									  GetContainerItemID, 	 								   GetInventoryItemID, 	         GetItemInfoInstant,           GetItemCount, 	       IsEquippableItem =	  
+	  _G.GetContainerNumSlots or C_Container.GetContainerNumSlots, _G.GetContainerItemID or C_Container.GetContainerItemID, _G.GetInventoryItemID, _G.C_Item.GetItemInfoInstant, _G.C_Item.GetItemCount, _G.C_Item.IsEquippableItem	 
 	  
 -- Totems
 local GetTotemInfo				= _G.GetTotemInfo
