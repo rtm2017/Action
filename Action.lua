@@ -1,5 +1,5 @@
 --- 0This line must be translated
-local DateTime 														= "17.11.2023"
+local DateTime 														= "06.06.2024"
 ---
 local pcall, ipairs, pairs, type, assert, error, setfenv, getmetatable, setmetatable, loadstring, next, unpack, select, _G, coroutine, table, math, string =
 	  pcall, ipairs, pairs, type, assert, error, setfenv, getmetatable, setmetatable, loadstring, next, unpack, select, _G, coroutine, table, math, string
@@ -8200,14 +8200,15 @@ local LineOfSight = {
 
 		if not UnitIsUnit("target", unitID) and A_Unit(unitID):IsNameplateAny() then 
 			-- Not valid for @target
-			local UnitFrame
+			local UnitFrame, NamePlateFrame
 			for i = 1, huge do 
-				if not self.NamePlateFrame[i] then 
+				NamePlateFrame = self.NamePlateFrame[i]
+				if not NamePlateFrame then 
 					break 
 				else
-					UnitFrame = self.NamePlateFrame[i].UnitFrame
+					UnitFrame = NamePlateFrame.UnitFrame
 					if UnitFrame and UnitFrame.unitExists and UnitIsUnit(UnitFrame.unit, unitID) then
-						return UnitFrame:GetEffectiveAlpha() <= 0.4
+						return UnitFrame:GetEffectiveAlpha() <= 0.400001
 					end		
 				end 
 			end 
@@ -13583,7 +13584,7 @@ function Action.ToggleMainUI()
 					end 
 					Button:SetValue(rowData.Button)
 					isTotem:SetChecked(rowData.isTotem)
-					InputBox:SetNumber(rowData.Name)	
+					InputBox:SetText(rowData.Name)	
 					InputBox:ClearFocus()
 				end 				
 			end 			
